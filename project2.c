@@ -171,19 +171,14 @@ insert()
         scanf("%d", &process_s[rears][0]);
 		scanf("%d",&process_s[rears][1]);
 		scanf("%d", &process_s[rears][2]);
-        process_s[rears][0] = add_p;
-        process_s[rears][1] = add_bt;
-        process_s[rears][2] = add_at;
         process_s[rears][3] = 1;
         rears = rears + 1;
         bursttime=bursttime+add_bt;
         }
         for(i=n_f;i<n_f+n_s;i++)
+		for(j=0;j<4;j++)
 		{
-		    process[i][0]=process_s[i-n_f][0];
-		    process[i][1]=process_s[i-n_f][1];
-		    process[i][2]=process_s[i-n_f][2];
-		    process[i][3]=process_s[i-n_f][3];
+		    process[i][j]=process_s[i-n_f][j];
 		    }
 		    //sort();
 		if(bursttime>120)
@@ -205,7 +200,6 @@ y:    printf("Press 1 to enter more processes to the queue else press 0 to stop 
     	np=n_f+n_s;
     	qt=120/np;
     	Findavg_Time(np,qt);
-    	
 	}
  
 	} /*End of insert()*/
