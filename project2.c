@@ -206,6 +206,23 @@ y:    printf("Press 1 to enter more processes to the queue else press 0 to stop 
 
 
 
+display()
+{
+	int i;
+	sort();
+    if (front == - 1)
+        printf("Queue is empty \n");
+    else
+    {
+        printf("Queue is : \n");
+        printf("Process\tBurst Time\tArrival Time\tPriority\n");
+        for (i = 0; i < n_f+n_s; i++)
+            printf("%d\t\t %d\t\t %d\t\t %d\n", process[i][0],process[i][1],process[i][2],process[i][3]);
+        printf("\n");
+    }
+} /*End of display() */
+
+
 
 
 int main()
