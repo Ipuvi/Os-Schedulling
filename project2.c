@@ -116,7 +116,6 @@ Findavg_Time(int np,int quantum)
 /*End of Calculation of Average time....*/
 
 
-
 insert()
 {
 	int i,p,rearf=0,rears=0,np;
@@ -189,7 +188,6 @@ insert()
     }
 	}
 	
-
 y:    printf("Press 1 to enter more processes to the queue else press 0 to stop adding and continue: ");
     scanf("%d",&c);
     if(c==1)
@@ -203,7 +201,6 @@ y:    printf("Press 1 to enter more processes to the queue else press 0 to stop 
 	}
  
 	} /*End of insert()*/
-
 
 
 display()
@@ -221,8 +218,6 @@ display()
         printf("\n");
     }
 } /*End of display() */
-
-
 
 
 int main()
