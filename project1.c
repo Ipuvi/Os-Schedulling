@@ -7,7 +7,7 @@ int process_s[MAX][4];
 int process[2*MAX][4];
 int rear = 0;
 int front= 0;
-int n_f=0,n_s=0,c,np,qt,a=4;
+int n_f=0,n_s=0,c,np,qt;
 int bursttime=0;
 
 int main()
@@ -168,15 +168,15 @@ insert()
         printf("Insert the process in queue, its burst time and arrival time : \n");
         while(rearf<n_f)
         {
-        scanf("%d", &add_p);
-		scanf("%d",&add_bt);
-		scanf("%d", &add_at);
-        process_f[rearf][0] = add_p;
+        scanf("%d", &process_f[rearf][0]);
+		scanf("%d",&process_f[rearf][1]);
+		scanf("%d", &process_f[rearf][2]);
+        /*process_f[rearf][0] = add_p;
         process_f[rearf][1] = add_bt;
-        process_f[rearf][2] = add_at;
+        process_f[rearf][2] = add_at;*/
         process_f[rearf][3] = 0;
         rearf = rearf + 1;
-        bursttime=bursttime+add_bt;
+        bursttime=bursttime+process_f[rearf][1];
         }
         for(i=n_s;i<n_f+n_s;i++)
     	{
@@ -209,15 +209,15 @@ insert()
   
         while(rears<n_s)
         {
-        scanf("%d", &add_p);
-		scanf("%d",&add_bt);
-		scanf("%d", &add_at);
-        process_s[rears][0] = add_p;
+        scanf("%d", &process_s[rears][0]);
+		scanf("%d",&process_s[rears][1]);
+		scanf("%d", &process_s[rears][2]);
+      /*  process_s[rears][0] = add_p;
         process_s[rears][1] = add_bt;
-        process_s[rears][2] = add_at;
+        process_s[rears][2] = add_at;*/
         process_s[rears][3] = 1;
         rears = rears + 1;
-        bursttime=bursttime+add_bt;
+        bursttime=bursttime+process_s[rears][1];
         }
         for(i=n_f;i<n_f+n_s;i++)
 		{
