@@ -147,6 +147,7 @@ Findavg_Time(int np,int quantum)
 	
 	printf("Average Waiting time: %f\n",(float)total_wt/(float)np);
 	printf("Average Turn Around Time: %f\n",(float)total_tat/(float)np);
+	
 }
 /*End of Calculation of Average time....*/
 
